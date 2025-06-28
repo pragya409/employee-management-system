@@ -1,0 +1,13 @@
+
+CREATE DATABASE IF NOT EXISTS ems;
+USE ems;
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    dob DATE NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20),
+    role ENUM('Admin','HR','Viewer') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
